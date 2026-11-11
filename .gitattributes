@@ -1,0 +1,2 @@
+# Os CSV de dados são comparados byte a byte nos testes: o git não mexe nas quebras de linha.
+data/** -text
