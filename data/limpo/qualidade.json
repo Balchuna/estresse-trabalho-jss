@@ -1,0 +1,22 @@
+{
+  "Unidade 1": {
+    "codificacao": "utf-8",
+    "colunas_pessoais_removidas": 3,
+    "respondentes": 80,
+    "respostas_vazias": 0,
+    "respostas_fora_da_escala": 0
+  },
+  "Unidade 2": {
+    "codificacao": "cp1252",
+    "colunas_pessoais_removidas": 4,
+    "respondentes": 50,
+    "respostas_vazias": 1,
+    "respostas_fora_da_escala": 0
+  },
+  "mesmas_17_perguntas": true,
+  "minimo_por_setor": 5,
+  "setores_agrupados_em_outros": 4,
+  "respondentes_em_outros": 10,
+  "unidades_com_outros_abaixo_do_minimo": [],
+  "total_de_respondentes": 130
+}
