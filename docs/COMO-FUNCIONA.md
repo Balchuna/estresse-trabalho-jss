@@ -36,3 +36,34 @@ O mesmo programa limpa dados reais no computador de quem tem o direito de usá-l
 - Arquivos pequenos, montados dentro do teste, com cada defeito: codificação cp1252, ponto e vírgula, espaços, resposta fora da escala, pergunta faltando, perguntas diferentes entre unidades, setor pequeno.
 - O gerador é conferido byte a byte: a mesma semente dá sempre os mesmos arquivos, iguais aos do repositório.
 - A saída da limpeza é varrida atrás de horário, e-mail e espaço não separável.
+
+# Como funciona (fases 2 a 4)
+
+## Da resposta ao escore
+
+Cada resposta vira um número de 1 a 4. "Frequentemente" e "Concordo totalmente" valem 4; "Nunca ou quase nunca" e "Discordo" valem 1.
+
+Dois itens são **invertidos**. Exemplo: responder "Frequentemente" a "tenho tempo suficiente" indica **pouca** demanda, então vale 1 em vez de 4. A conta é `5 − pontos`.
+
+Depois é só somar: demanda (5 itens, de 5 a 20), controle (6 itens, de 6 a 24) e apoio social (6 itens, de 6 a 24).
+
+## Do escore ao quadrante
+
+Calculo a mediana de demanda e a de controle entre todos os respondentes. Quem está acima da mediana é "alto".
+
+- demanda alta + controle baixo = **alta exigência** (o grupo que mais preocupa);
+- demanda alta + controle alto = trabalho ativo;
+- demanda baixa + controle baixo = trabalho passivo;
+- demanda baixa + controle alto = baixa exigência.
+
+O apoio social entra à parte: alto ou baixo, também pela mediana.
+
+## As três conferências
+
+- **Alfa de Cronbach:** os itens de uma dimensão andam juntos? Se sim, o alfa fica perto de 1.
+- **Descritivo:** média, desvio-padrão e mediana por unidade e por setor, mais o percentual em alta exigência.
+- **Mann-Whitney:** as duas unidades diferem? O teste compara a posição das pessoas numa fila ordenada pelo escore. O tamanho de efeito (de −1 a 1) diz se a diferença é grande.
+
+## O relatório
+
+`scripts/gerar_relatorio.py` lê as tabelas de `resultados/` e monta um HTML com resumo, método, resultados, limitações e uso no PGR. A seção "Interpretação" é lida de `docs/INTERPRETACAO.md`, que o autor escreve.

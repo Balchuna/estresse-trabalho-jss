@@ -19,3 +19,29 @@
 8. **Linhas embaralhadas com semente fixa.** Apaga a ordem de chegada das respostas sem perder a reprodutibilidade.
 
 9. **Rótulos em texto, sem números ainda.** A conversão das respostas em pontos (e os itens invertidos) depende de confirmar o método no artigo original. Fica para a fase 2.
+
+## Fase 2: pontuação (11/11/2026)
+
+10. **Duas fontes para o método.** Alves et al. (2004) confirma itens, dimensões e opções de resposta, mas não diz quais itens são invertidos nem como somar. Essas regras vêm de Aguiar et al. (2010). A tabela "regra → fonte" está em `docs/METODO.md`.
+
+11. **Sem imputação.** Quem deixou um item em branco fica sem escore só naquela dimensão.
+
+12. **O formulário diz "Discordo" onde o artigo diz "Discordo totalmente".** O projeto aceita o rótulo do formulário, com 1 ponto, e registra a diferença como limitação.
+
+13. **O gerador respeita os itens invertidos.** Na primeira versão não respeitava, e o alfa de Cronbach da demanda saiu 0,32. Corrigido (tendência com sinal trocado em `q04` e `q09`), foi para 0,81.
+
+## Fase 3: análise (11/11/2026)
+
+14. **Corte pela mediana geral; empate conta como "baixo".** Os artigos não definem corte. A mediana da amostra é o critério mais comum no modelo demanda-controle. Uma mediana só para as duas unidades permite compará-las na mesma régua.
+
+15. **Mann-Whitney e correlação bisserial por postos.** Escores ordinais, com poucos valores e amostra pequena. Sem correção para múltiplos testes: são só três, e a ressalva está escrita no relatório.
+
+16. **A análise se recusa a mostrar grupo com menos de 5.** É uma segunda trava, além do "Outros" da limpeza.
+
+17. **O caderno só chama funções.** A lógica fica em `src/jss/`, onde os testes alcançam.
+
+## Fase 4: relatório (11/11/2026)
+
+18. **HTML gerado por script, sem biblioteca de modelo.** O relatório é refeito a partir das tabelas de `resultados/`, e um teste confere que o arquivo publicado está atualizado.
+
+19. **A interpretação é do Rafael.** O texto vem de `docs/INTERPRETACAO.md`. Enquanto não for escrito, o relatório mostra a seção marcada como pendente.
