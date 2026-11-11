@@ -1,0 +1,4 @@
+dimensao,n_unidade_1,n_unidade_2,mediana_unidade_1,mediana_unidade_2,U,p,efeito_r
+demanda,80,50,15.0,17.0,1679.0,0.1231,-0.1605
+controle,80,49,17.5,15.0,2715.5,0.0002,0.3855
+apoio,80,50,19.0,21.0,1613.0,0.063,-0.1935

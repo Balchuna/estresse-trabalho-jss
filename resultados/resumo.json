@@ -1,0 +1,19 @@
+{
+  "respondentes": 130,
+  "com_quadrante": 129,
+  "cortes_mediana": {
+    "demanda": 16.0,
+    "controle": 16.0,
+    "apoio": 20.0
+  },
+  "quadrantes_geral": {
+    "Baixa exigência": 35,
+    "Trabalho passivo": 35,
+    "Alta exigência": 34,
+    "Trabalho ativo": 25
+  },
+  "apoio_geral": {
+    "Baixo apoio": 67,
+    "Alto apoio": 63
+  }
+}
