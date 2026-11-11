@@ -15,6 +15,9 @@ from pathlib import Path
 
 from jss.limpeza import ESCALA_CONCORDANCIA, ESCALA_FREQUENCIA
 
+#: Perguntas de pontuação invertida (ver docs/METODO.md): a tendência entra com sinal trocado.
+INVERTIDAS = (4, 9)
+
 SEMENTE = 20261111
 NBSP = " "
 
@@ -48,8 +51,10 @@ def _cabecalho(com_email: bool) -> list[str]:
     return pessoais + ["Em qual setor você trabalha"] + itens
 
 
-def _resposta(rng: random.Random, tendencia: float, pessoa: float, escala) -> str:
+def _resposta(rng: random.Random, tendencia: float, pessoa: float, escala, invertida: bool) -> str:
     z = tendencia + 0.7 * pessoa + rng.gauss(0, 0.7)
+    if invertida:
+        z = -z
     indice = 0 if z > 0.6 else 1 if z > -0.4 else 2 if z > -1.2 else 3
     texto = escala[indice]
     sorteio = rng.random()
@@ -72,8 +77,9 @@ def gerar_unidade(rng: random.Random, setores: dict, com_email: bool) -> list[li
         linha = [str(numero), inicio, fim] + (["anonymous"] if com_email else []) + [setor]
         for (primeira, ultima, escala), tendencia in zip(BLOCOS, tendencias):
             pessoa = rng.gauss(0, 1)
-            for _ in range(primeira, ultima + 1):
-                linha.append(_resposta(rng, tendencia, pessoa, escala))
+            for numero_da_pergunta in range(primeira, ultima + 1):
+                invertida = numero_da_pergunta in INVERTIDAS
+                linha.append(_resposta(rng, tendencia, pessoa, escala, invertida))
         linhas.append(linha)
     return linhas
 
