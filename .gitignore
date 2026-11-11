@@ -1,0 +1,10 @@
+# Dados de origem (sensíveis): nunca entram no repositório
+data/raw/
+data/privado/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+.ipynb_checkpoints/
