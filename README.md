@@ -78,3 +78,7 @@ Para abrir o caderno: `pip install notebook` e `jupyter notebook analise.ipynb`.
 - **Rastreamento, não diagnóstico:** a escala aponta onde olhar; não diagnostica pessoas.
 - **Corte pela mediana:** "alto" e "baixo" são relativos ao próprio grupo.
 - **Redação do formulário:** a quarta opção de apoio social aparece como "Discordo", e não "Discordo totalmente" como no artigo.
+
+## Licença
+
+Código sob a licença [MIT](LICENSE). O questionário Job Stress Scale não faz parte deste repositório: o texto dos itens pertence aos seus autores e não é reproduzido aqui.
