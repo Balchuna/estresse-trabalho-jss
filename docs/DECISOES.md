@@ -1,6 +1,6 @@
 # Decisões
 
-## Fase 1 (11/11/2026)
+## Limpeza e anonimização (11/11/2026)
 
 1. **Repositório com dados sintéticos.** Não há autorização da empresa para usar as respostas reais em portfólio. A análise real, se for feita, fica só no computador, em pastas ignoradas pelo git.
 
@@ -12,15 +12,15 @@
 
 5. **Colunas pessoais descartadas na leitura.** Usar `usecols` é mais seguro do que carregar tudo e apagar depois: não existe um momento em que a tabela tenha e-mail ou horário.
 
-6. **Mínimo de 5 por setor, contado dentro de cada unidade.** A análise será por setor e unidade, então é nesse cruzamento que o grupo pequeno aparece. Se o próprio "Outros" ficar abaixo de 5, o resumo de qualidade avisa (`unidades_com_outros_abaixo_do_minimo`) e a análise não poderá mostrá-lo separado.
+6. **Mínimo de 5 por setor, contado dentro de cada unidade.** A análise é por setor e unidade, então é nesse cruzamento que o grupo pequeno aparece. Se o próprio "Outros" ficar abaixo de 5, o resumo de qualidade avisa (`unidades_com_outros_abaixo_do_minimo`) e a análise não o mostra separado.
 
-7. **Resposta vazia ou fora da escala vira ausente.** Nada é corrigido nem adivinhado; só é contado. Como tratar ausentes na pontuação é decisão da fase 2.
+7. **Resposta vazia ou fora da escala vira ausente.** Nada é corrigido nem adivinhado; só é contado. Como os ausentes entram na pontuação está no item 11.
 
 8. **Linhas embaralhadas com semente fixa.** Apaga a ordem de chegada das respostas sem perder a reprodutibilidade.
 
-9. **Rótulos em texto, sem números ainda.** A conversão das respostas em pontos (e os itens invertidos) depende de confirmar o método no artigo original. Fica para a fase 2.
+9. **Rótulos em texto, sem números ainda.** A conversão das respostas em pontos (e os itens invertidos) dependia de confirmar o método no artigo original, o que ficou para a pontuação (item 10).
 
-## Fase 2: pontuação (11/11/2026)
+## Pontuação (11/11/2026)
 
 10. **Duas fontes para o método.** Alves et al. (2004) confirma itens, dimensões e opções de resposta, mas não diz quais itens são invertidos nem como somar. Essas regras vêm de Aguiar et al. (2010). A tabela "regra → fonte" está em `docs/METODO.md`.
 
@@ -30,7 +30,7 @@
 
 13. **O gerador respeita os itens invertidos.** Na primeira versão não respeitava, e o alfa de Cronbach da demanda saiu 0,32. Corrigido (tendência com sinal trocado em `q04` e `q09`), foi para 0,81.
 
-## Fase 3: análise (11/11/2026)
+## Análise (11/11/2026)
 
 14. **Corte pela mediana geral; empate conta como "baixo".** Os artigos não definem corte. A mediana da amostra é o critério mais comum no modelo demanda-controle. Uma mediana só para as duas unidades permite compará-las na mesma régua.
 
@@ -40,7 +40,7 @@
 
 17. **O caderno só chama funções.** A lógica fica em `src/jss/`, onde os testes alcançam.
 
-## Fase 4: relatório (11/11/2026)
+## Relatório (11/11/2026)
 
 18. **HTML gerado por script, sem biblioteca de modelo.** O relatório é refeito a partir das tabelas de `resultados/`, e um teste confere que o arquivo publicado está atualizado.
 
