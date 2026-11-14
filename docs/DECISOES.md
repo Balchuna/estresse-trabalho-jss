@@ -8,7 +8,7 @@
 
 3. **Perguntas identificadas pela posição.** Como o texto não fica guardado, a limpeza confia na ordem das colunas. Para isso ser seguro, ela exige exatamente 17 perguntas e compara o texto das duas unidades em memória; a mensagem de erro cita só a posição.
 
-4. **Distribuições inventadas, não copiadas.** O gerador usa setores, tamanhos (80 e 50) e tendências inventados. Calibrar o gerador pelas distribuições reais por setor publicaria, na prática, um retrato agregado de dados sem autorização. *Pendente de confirmação.*
+4. **Distribuições inventadas, não copiadas.** O gerador usa setores, tamanhos (80 e 50) e tendências inventados. Calibrar o gerador pelas distribuições reais por setor publicaria, na prática, um retrato agregado de dados sem autorização.
 
 5. **Colunas pessoais descartadas na leitura.** Usar `usecols` é mais seguro do que carregar tudo e apagar depois: não existe um momento em que a tabela tenha e-mail ou horário.
 
