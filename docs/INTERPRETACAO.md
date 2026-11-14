@@ -1,5 +1,9 @@
-[A ESCREVER PELO RAFAEL]
+Os dados deste relatório são fictícios. As diferenças entre setores foram colocadas no gerador, então o que vem a seguir é um exercício de leitura: é assim que eu interpretaria esses resultados se eles viessem de uma empresa real.
 
-Este arquivo vira a seção "Interpretação" do relatório. Escreva em parágrafos simples, separados por uma linha em branco, e rode `python scripts/gerar_relatorio.py` de novo.
+O ponto que mais chama atenção é a Unidade 2. Ali, Expedição (5 de 8 pessoas) e Produção (12 de 26) concentram a alta exigência, e a única diferença clara entre as unidades está no controle, menor na Unidade 2. A demanda e o apoio social não diferem de forma clara. Isso sugere que o problema nesses setores tem mais a ver com pouca autonomia do que com excesso de trabalho: as pessoas têm pouca margem para decidir como e em que ritmo fazem as tarefas, e é essa combinação de cobrança com pouco controle que o modelo de Karasek aponta como a mais desgastante.
 
-Roteiro sugerido: o que o padrão de demanda, controle e apoio sugere sobre a organização do trabalho em cada setor; que hipóteses merecem ser investigadas com outros métodos (entrevistas, observação); o que este resultado NÃO permite afirmar.
+Se isso for verdade, aumentar o controle tende a ajudar mais do que só reduzir a carga. Na prática, seria dar às equipes mais participação na organização dos turnos, das pausas e da sequência das tarefas. Antes de propor qualquer mudança, porém, valeria entender por que o controle é baixo ali, com entrevistas ou rodas de conversa com Expedição e Produção da Unidade 2 e com observação do trabalho. A escala mostra onde olhar, mas não explica o que acontece.
+
+A Produção da Unidade 1 também merece atenção, com 9 de 30 pessoas em alta exigência e 10 em trabalho passivo. O trabalho passivo costuma passar despercebido porque não gera queixa de sobrecarga, mas pouca demanda com pouco controle pode estar ligado a desmotivação e a perda de aprendizado no trabalho.
+
+O que estes resultados não permitem afirmar: que o trabalho causa adoecimento, porque o questionário é de autorrelato e foi aplicado num único momento; que alguma pessoa está doente, porque a escala é de rastreamento e não de diagnóstico; e que um setor é "pior" que outro em termos absolutos, porque o corte pela mediana compara os grupos entre si. Em grupos de 5 a 10 pessoas, uma ou duas respostas já mudam o percentual. Por isso, este resultado serve como ponto de partida para o PGR, para decidir onde aprofundar a avaliação, e não como conclusão.
